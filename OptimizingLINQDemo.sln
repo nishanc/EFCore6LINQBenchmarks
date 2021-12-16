@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31919.166
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OptimizingLINQDemo", "OptimizingLINQDemo\OptimizingLINQDemo.csproj", "{EFACB764-E8AD-419F-B01A-2EB9FF468778}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EFACB764-E8AD-419F-B01A-2EB9FF468778}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EFACB764-E8AD-419F-B01A-2EB9FF468778}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EFACB764-E8AD-419F-B01A-2EB9FF468778}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EFACB764-E8AD-419F-B01A-2EB9FF468778}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {89FD5EEF-ECDD-493A-A90C-96CCA3BF9978}
+	EndGlobalSection
+EndGlobal
