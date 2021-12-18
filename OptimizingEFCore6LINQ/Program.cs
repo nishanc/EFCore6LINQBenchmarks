@@ -1,7 +1,7 @@
 ﻿using BenchmarkDotNet.Running;
-using OptimizingEFCore6LINQ.Benchmarks;
+using EFCore6LINQBenchmarks.Benchmarks;
 
-namespace OptimizingEFCore6LINQ
+namespace EFCore6LINQBenchmarks
 {
     internal static class Program
     {

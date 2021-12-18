@@ -1,6 +1,6 @@
-﻿using OptimizingEFCore6LINQ.Data;
+﻿using EFCore6LINQBenchmarks.Data;
 
-namespace OptimizingEFCore6LINQ.Benchmarks
+namespace EFCore6LINQBenchmarks.Benchmarks
 {
     public class Benchmark : IDisposable
     {

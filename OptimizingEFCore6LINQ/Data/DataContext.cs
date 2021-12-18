@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
-using OptimizingEFCore6LINQ.Models;
+using EFCore6LINQBenchmarks.Models;
 
-namespace OptimizingEFCore6LINQ.Data
+namespace EFCore6LINQBenchmarks.Data
 {
     public class DataContext : DbContext
     {
@@ -16,7 +16,7 @@ namespace OptimizingEFCore6LINQ.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=MyDatabase1;Trusted_Connection=True;ConnectRetryCount=0");
+            optionsBuilder.UseSqlServer(@"Server=.;Database=MyDatabase;Trusted_Connection=True;ConnectRetryCount=0");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

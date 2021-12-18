@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace OptimizingEFCore6LINQ.Migrations
+namespace EFCore6LINQBenchmarks.Migrations
 {
     public partial class InitialCreate : Migration
     {

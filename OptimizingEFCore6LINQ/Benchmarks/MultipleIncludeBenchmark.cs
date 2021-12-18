@@ -1,9 +1,9 @@
 ﻿using System.Runtime.CompilerServices;
 using BenchmarkDotNet.Attributes;
 using Microsoft.EntityFrameworkCore;
-using OptimizingEFCore6LINQ.Models;
+using EFCore6LINQBenchmarks.Models;
 
-namespace OptimizingEFCore6LINQ.Benchmarks
+namespace EFCore6LINQBenchmarks.Benchmarks
 {
     [MemoryDiagnoser]
     public class MultipleIncludeBenchmark : Benchmark
@@ -27,8 +27,7 @@ namespace OptimizingEFCore6LINQ.Benchmarks
                 .ThenInclude(x => x.Category).LoadAsync();
             await query.Include(x => x.Author).LoadAsync();
             await query.Include(x => x.Author.Biography).LoadAsync();
-            var x = await query.ToListAsync();
-            return x;
+            return await query.ToListAsync();
         }
     }
 }

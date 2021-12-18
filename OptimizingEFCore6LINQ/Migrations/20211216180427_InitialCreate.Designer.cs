@@ -5,11 +5,11 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using OptimizingEFCore6LINQ.Data;
+using EFCore6LINQBenchmarks.Data;
 
 #nullable disable
 
-namespace OptimizingEFCore6LINQ.Migrations
+namespace EFCore6LINQBenchmarks.Migrations
 {
     [DbContext(typeof(DataContext))]
     [Migration("20211216180427_InitialCreate")]
@@ -24,7 +24,7 @@ namespace OptimizingEFCore6LINQ.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Author", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Author", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -45,7 +45,7 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.ToTable("Authors");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.AuthorBiography", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.AuthorBiography", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -79,7 +79,7 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.ToTable("AuthorBiographies");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Book", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -101,7 +101,7 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.BookCategory", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.BookCategory", b =>
                 {
                     b.Property<int>("BookId")
                         .HasColumnType("int");
@@ -116,7 +116,7 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.ToTable("BookCategories");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Category", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -133,7 +133,7 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Company", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Company", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -150,7 +150,7 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.ToTable("Companies");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Employee", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Employee", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -172,20 +172,20 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.ToTable("Employees");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.AuthorBiography", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.AuthorBiography", b =>
                 {
-                    b.HasOne("OptimizingEFCore6LINQ.Models.Author", "Author")
+                    b.HasOne("EFCore6LINQBenchmarks.Models.Author", "Author")
                         .WithOne("Biography")
-                        .HasForeignKey("OptimizingEFCore6LINQ.Models.AuthorBiography", "AuthorId")
+                        .HasForeignKey("EFCore6LINQBenchmarks.Models.AuthorBiography", "AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.Navigation("Author");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Book", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Book", b =>
                 {
-                    b.HasOne("OptimizingEFCore6LINQ.Models.Author", "Author")
+                    b.HasOne("EFCore6LINQBenchmarks.Models.Author", "Author")
                         .WithMany()
                         .HasForeignKey("AuthorId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -194,15 +194,15 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.Navigation("Author");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.BookCategory", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.BookCategory", b =>
                 {
-                    b.HasOne("OptimizingEFCore6LINQ.Models.Book", "Book")
+                    b.HasOne("EFCore6LINQBenchmarks.Models.Book", "Book")
                         .WithMany("BookCategories")
                         .HasForeignKey("BookId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("OptimizingEFCore6LINQ.Models.Category", "Category")
+                    b.HasOne("EFCore6LINQBenchmarks.Models.Category", "Category")
                         .WithMany("BookCategories")
                         .HasForeignKey("CategoryId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -213,9 +213,9 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Employee", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Employee", b =>
                 {
-                    b.HasOne("OptimizingEFCore6LINQ.Models.Company", "Company")
+                    b.HasOne("EFCore6LINQBenchmarks.Models.Company", "Company")
                         .WithMany("Employees")
                         .HasForeignKey("CompanyId")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -224,23 +224,23 @@ namespace OptimizingEFCore6LINQ.Migrations
                     b.Navigation("Company");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Author", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Author", b =>
                 {
                     b.Navigation("Biography")
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Book", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Book", b =>
                 {
                     b.Navigation("BookCategories");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Category", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Category", b =>
                 {
                     b.Navigation("BookCategories");
                 });
 
-            modelBuilder.Entity("OptimizingEFCore6LINQ.Models.Company", b =>
+            modelBuilder.Entity("EFCore6LINQBenchmarks.Models.Company", b =>
                 {
                     b.Navigation("Employees");
                 });

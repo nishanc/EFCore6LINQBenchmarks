@@ -1,4 +1,4 @@
-﻿namespace OptimizingEFCore6LINQ.Models
+﻿namespace EFCore6LINQBenchmarks.Models
 {
     public class BookCategory
     {

@@ -1,7 +1,7 @@
 ﻿using BenchmarkDotNet.Attributes;
-using OptimizingEFCore6LINQ.Models;
+using EFCore6LINQBenchmarks.Models;
 
-namespace OptimizingEFCore6LINQ.Benchmarks
+namespace EFCore6LINQBenchmarks.Benchmarks
 {
     [MemoryDiagnoser]
     public class OrderByWhereBenchmark : Benchmark
