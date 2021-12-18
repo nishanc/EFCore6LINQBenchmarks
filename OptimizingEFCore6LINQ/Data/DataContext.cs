@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Storage;
 using OptimizingEFCore6LINQ.Models;
 
 namespace OptimizingEFCore6LINQ.Data

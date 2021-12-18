@@ -8,7 +8,8 @@ namespace OptimizingEFCore6LINQ
         private static void Main(string[] args)
         {
             // BenchmarkRunner.Run<SelectWhereBenchmark>();
-            BenchmarkRunner.Run<OrderByWhereBenchmark>();
+            // BenchmarkRunner.Run<OrderByWhereBenchmark>();
+            BenchmarkRunner.Run<MultipleIncludeBenchmark>();
         }
     }
 }
