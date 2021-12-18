@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using OptimizingEFCore6LINQ.Data;
+﻿using OptimizingEFCore6LINQ.Data;
 
 namespace OptimizingEFCore6LINQ.Benchmarks
 {
