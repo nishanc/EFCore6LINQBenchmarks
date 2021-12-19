@@ -9,7 +9,8 @@ namespace EFCore6LINQBenchmarks
         {
             // BenchmarkRunner.Run<SelectWhereBenchmark>();
             // BenchmarkRunner.Run<OrderByWhereBenchmark>();
-            BenchmarkRunner.Run<MultipleIncludeBenchmark>();
+            // BenchmarkRunner.Run<MultipleIncludeBenchmark>();
+            BenchmarkRunner.Run<UnnecessaryJoinsBenchmark>();
         }
     }
 }
