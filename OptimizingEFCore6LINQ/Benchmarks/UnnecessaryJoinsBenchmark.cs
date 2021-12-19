@@ -25,9 +25,8 @@ namespace EFCore6LINQBenchmarks.Benchmarks
         [Benchmark]
         public async Task<List<CustomView>> WithoutJoins()
         {
-
-            var authors1 = await (from author in Context.Authors where author.Id > 5 select author).Select(x => x).ToListAsync();
-            var books = await (from book in Context.Books where authors1.Contains(book.Author) select book)
+            var authors = await (from author in Context.Authors where author.Id > 5 select author).Select(x => x).ToListAsync();
+            var books = await (from book in Context.Books where authors.Contains(book.Author) select book)
                 .Select(x => new CustomView
             {
                 Title = x.Title,

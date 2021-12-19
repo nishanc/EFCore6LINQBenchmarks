@@ -16,7 +16,7 @@ namespace EFCore6LINQBenchmarks.Data
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(@"Server=.;Database=MyDatabase;Trusted_Connection=True;ConnectRetryCount=0");
+            optionsBuilder.UseSqlServer(@"Server=.;Database=MyDatabase1;Trusted_Connection=True;ConnectRetryCount=0");
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
